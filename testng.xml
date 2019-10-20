@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Addigy Automation Test Suite" verbose="1" >
+
+    
+    <listeners>
+        <listener class-name="com.addigy.util.ExtentReporterNG" />
+    </listeners>
+    <test name="Addigy Test Cases" >
+     <classes>
+         <class name="com.addigy.testcases.MainPageTest"></class>
+         <class name="com.addigy.testcases.LoginPageTest"></class>
+         <class name="com.addigy.testcases.BusinessDashboardPageTest"></class>
+         <class name="com.addigy.testcases.CareersPageTest"></class>
+         <class name="com.addigy.testcases.SDETPageTest"></class>
+
+     </classes>
+    </test>
+</suite>
