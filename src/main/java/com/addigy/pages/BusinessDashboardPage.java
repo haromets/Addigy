@@ -33,6 +33,9 @@ public class BusinessDashboardPage extends TestBase {
     @FindBy(xpath = "//a[contains(text(),'University')]")
     WebElement universityTab;
 
+    @FindBy(xpath = "//*[@id='page1']/div[3]/div[3]/div/div/div/div[2]")
+    WebElement markForWindows;
+
     public BusinessDashboardPage(){
         PageFactory.initElements(driver, this);
     }
@@ -59,19 +62,19 @@ public class BusinessDashboardPage extends TestBase {
 
     public boolean verifyMinimizeWindows(){
         boolean isTrue = false;
+        System.out.println(minimazeWindow.size());
+        System.out.println(panelBody.size());
+
         for(WebElement  el: minimazeWindow){
             try {
-                Thread.sleep(500);
+                Thread.sleep(600);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             el.click();
         }
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
+        wait.until(ExpectedConditions.invisibilityOf(markForWindows));
         for(WebElement el: panelBody){
             if(!(el.isDisplayed())){
                 isTrue = true;
