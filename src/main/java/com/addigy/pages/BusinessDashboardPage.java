@@ -62,9 +62,6 @@ public class BusinessDashboardPage extends TestBase {
 
     public boolean verifyMinimizeWindows(){
         boolean isTrue = false;
-        System.out.println(minimazeWindow.size());
-        System.out.println(panelBody.size());
-
         for(WebElement  el: minimazeWindow){
             try {
                 Thread.sleep(600);
@@ -85,16 +82,4 @@ public class BusinessDashboardPage extends TestBase {
         }
         return isTrue;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
