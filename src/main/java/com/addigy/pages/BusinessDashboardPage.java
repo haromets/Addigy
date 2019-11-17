@@ -64,7 +64,7 @@ public class BusinessDashboardPage extends TestBase {
         boolean isTrue = false;
         for(WebElement  el: minimazeWindow){
             try {
-                Thread.sleep(600);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
