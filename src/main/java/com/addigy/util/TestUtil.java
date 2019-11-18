@@ -16,7 +16,7 @@ public class TestUtil {
     public static long IMPLICIT_WAIT = 10;
     public static long EXPLICIT_WAIT = 10;
 
-    public static String TESTDATA_SHEET_PATH = "/Users/pavelaleinik/Library/Mobile Documents/com~apple~CloudDocs/Java/Selenium_projects/addigy/src/main/resources/AddigyTestData.xlsx";
+    public static String TEST_DATA_SHEET_PATH = "/Users/pavelaleinik/Library/Mobile Documents/com~apple~CloudDocs/Java/Selenium_projects/addigy/src/main/resources/AddigyTestData.xlsx";
 
     static Workbook book;
     static Sheet sheet;
@@ -24,7 +24,7 @@ public class TestUtil {
     public static Object[][] getTestData(String sheetName) {
         FileInputStream file = null;
         try {
-            file = new FileInputStream(TESTDATA_SHEET_PATH);
+            file = new FileInputStream(TEST_DATA_SHEET_PATH);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
