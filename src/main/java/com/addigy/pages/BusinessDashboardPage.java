@@ -60,11 +60,12 @@ public class BusinessDashboardPage extends TestBase {
         return numberActiveDevices.getText().equals(countDevices);
     }
 
+// git
     public boolean verifyMinimizeWindows(){
         boolean isTrue = false;
         for(WebElement  el: minimazeWindow){
             try {
-                Thread.sleep(1000);
+                Thread.sleep(850);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
